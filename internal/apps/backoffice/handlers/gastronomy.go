@@ -45,6 +45,6 @@ var restaurants = []gastronomy.Gastronomy{
 	},
 }
 
-func GetGastronomy(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, restaurants)
+func GetGastronomy(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, restaurants)
 }

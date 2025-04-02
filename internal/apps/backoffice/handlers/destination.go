@@ -46,6 +46,6 @@ var destinations = []destination.Destination{
 	},
 }
 
-func GetDestinations(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, destinations)
+func GetDestinations(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, destinations)
 }

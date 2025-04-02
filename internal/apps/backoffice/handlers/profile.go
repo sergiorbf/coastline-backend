@@ -27,6 +27,6 @@ var Profile = profile.Profile{
 	State:      1,
 }
 
-func GetProfile(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, Profile)
+func GetProfile(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, Profile)
 }

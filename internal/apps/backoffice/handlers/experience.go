@@ -31,6 +31,6 @@ var experiences = []experience.Experience{
 	},
 }
 
-func GetExperiences(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, experiences)
+func GetExperiences(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, experiences)
 }

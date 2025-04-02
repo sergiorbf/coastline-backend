@@ -23,7 +23,7 @@ func SetupRoutes() {
 
 	// Payment
 	router.GET("/payments", handlers.GetPayment)
-	router.GET("/payments/{id}", handlers.GetPaymentByID)
+	router.GET("/payments/:id", handlers.GetPaymentByID)
 	router.POST("/payments/create", handlers.CreatePayment)
 
 	router.Run("localhost:8080")
