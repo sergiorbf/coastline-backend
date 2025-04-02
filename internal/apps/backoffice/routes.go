@@ -22,9 +22,12 @@ func SetupRoutes() {
 	router.GET("/account-settings/profile", handlers.GetProfile)
 
 	// Payment
-	router.GET("/payments", handlers.GetPayment)
-	router.GET("/payments/:id", handlers.GetPaymentByID)
-	router.POST("/payments/create", handlers.CreatePayment)
+	paymentGroup := router.Group("/payments")
+	paymentGroup.GET("", handlers.GetPayment)
+	paymentGroup.GET("/:id", handlers.GetPaymentByID)
+	paymentGroup.POST("/create", handlers.CreatePayment)
+	paymentGroup.PUT("/update/:id", handlers.UpdatePayment)
+	paymentGroup.DELETE("/delete/:id", handlers.DeletePayment)
 
 	router.Run("localhost:8080")
 }

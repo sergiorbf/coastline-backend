@@ -8,7 +8,7 @@ const (
 )
 
 type PaymentMethod struct {
-	ID             string   `json:"id"`
+	ID             int      `json:"id"`
 	CardHolder     string   `json:"cardHolder"`
 	CardNumber     string   `json:"cardNumber"`
 	ExpirationDate string   `json:"expirationDate"`
