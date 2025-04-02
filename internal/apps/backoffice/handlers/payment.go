@@ -18,11 +18,15 @@ var PaymentMethods = []payment.PaymentMethod{
 	},
 }
 
-func GetPaymentMethods(c *gin.Context) {
+func GetPayment(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, PaymentMethods)
 }
 
-func CreatePaymentMethod(c *gin.Context) {
+func GetPaymentByID(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, PaymentMethods)
+}
+
+func CreatePayment(c *gin.Context) {
 	var newPaymentMethod payment.PaymentMethod
 
 	if err := c.BindJSON(&newPaymentMethod); err != nil {
